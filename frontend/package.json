@@ -16,8 +16,11 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-redux": "^9.2.0",
+    "react-router-dom": "^7.8.2",
     "socket.io-client": "^4.8.1",
     "tailwindcss": "^4.1.13",
+    "y-monaco": "^0.1.6",
+    "y-websocket": "^3.0.0",
     "yjs": "^13.6.27"
   },
   "devDependencies": {

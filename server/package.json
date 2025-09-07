@@ -16,6 +16,7 @@
     "fastify-socket.io": "^5.1.0",
     "pg": "^8.16.3",
     "redis": "^5.8.2",
+    "y-websocket": "^3.0.0",
     "yjs": "^13.6.27"
   },
   "devDependencies": {

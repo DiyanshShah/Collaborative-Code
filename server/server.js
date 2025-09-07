@@ -1,9 +1,16 @@
 const fastify = require('fastify')({logger: true});
+const { Server } = require('socket.io');
+const { setupWsConnection } = require('y-websocket/bin/server');
 
 fastify.register(require('fastify-socket.io'), {
 
 });
 
+const io = new Server(fastify.server)
+
+io.on('connection', (socket) => {
+    setupWsConnection(socket)
+})
 fastify.ready( err => {
     if(err) throw err;
 
@@ -30,7 +37,7 @@ fastify.get('/', async (request, response) => {
 
 const start = async () => {
     try {
-        await fastify.listen({port: 3000})
+        await fastify.listen({port: 3001})
     } catch (err) {
         fastify.log.error(err);
         process.exit(1);
